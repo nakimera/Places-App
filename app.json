@@ -1,4 +1,12 @@
 {
   "name": "placesApp",
-  "displayName": "placesApp"
+  "displayName": "placesApp",
+  "placesVisited": [
+    "Kampala",
+    "Kigali",
+    "New York",
+    "San Francisco",
+    "Paris",
+    "Rome"
+  ]
 }
