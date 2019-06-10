@@ -1,31 +1,40 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import placeImage from '../../assets/images/eiffel-tower-.jpg';
+import React from "react";
+import { StyleSheet, Image, View } from "react-native";
+import { Text, Card, CardItem } from "native-base";
+import placeImage from "../../assets/images/eiffel-tower-.jpg";
 
-const ListItem = (props) => (
-    <View style={styles.container}>
+const ListItem = props => (
+  <View>
+    <Card style={styles.card}>
+      <CardItem cardBody>
         <Image source={placeImage} style={styles.placeImage} />
+      </CardItem>
+      <CardItem cardBody style={styles.cardTitle}>
         <Text style={styles.placeName}>{props.placeName}</Text>
-    </View>
-)
+      </CardItem>
+    </Card>
+  </View>
+);
 
 const styles = StyleSheet.create({
-    container: {
-        height: 200,
-        backgroundColor: '#42cbf4',
-        width: '100%',
-        marginBottom: 15,
-        alignItems: "center",
-    },
-    placeImage:{
-        width: '100%',
-        height: '60%',
-    },
-    placeName: {
-        fontSize: 20,
-        color: 'white',
-        marginTop: 25
-    }
-})
+  card: {
+    height: 200,
+    width: "100%",
+    marginBottom: 25,
+  },
+  placeImage: {
+    width: "100%",
+    height: 150
+  },
+  placeName: {
+    fontSize: 20,
+    color: "white",
+  },
+  cardTitle: {
+    height: 50,
+    backgroundColor: "orangered",
+    justifyContent: "center"
+  }
+});
 
 export default ListItem;

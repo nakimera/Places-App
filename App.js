@@ -1,17 +1,20 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { Container, H1, H3, H4 } from 'native-base';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import AddPlaceContainer from './src/components/AppPlaceContainer/AddPlacesContainer';
 import PlacesList from './src/components/ListContainer/ListContainer';
 
 export default class App extends Component{
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to my places bucketlist app!</Text>
-        <Text style={styles.instructions}>Enter a place you would like to visit</Text>
+      <ScrollView>
+      <Container style={styles.container}>
+        <H3 style={styles.colorOrange}>Welcome to</H3>
+        <H1 style={styles.colorOrange}>Places bucketlist app!</H1>
         <AddPlaceContainer />
         <PlacesList />
-      </View>
+      </Container>
+      </ScrollView>
     );
   }
 }
@@ -22,14 +25,8 @@ const styles = StyleSheet.create({
     paddingTop: 70,
     alignItems: 'center',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: 'coral'
-  },
-  instructions: {
-    fontSize: 15,
-    color: '#333333',
-  },
+  colorOrange: {
+    color: 'orangered',
+    margin: 10
+  }
 });
